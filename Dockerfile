@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Federico Gimenez Nieto <fgimenez@coit.es>
+MAINTAINER Guyschaos <guyschaos@gmail.com>
 
 # Install packages: wget, git, mercurial and emacs
 RUN apt-get update && \
@@ -8,9 +8,9 @@ RUN apt-get update && \
     apt-get clean
 
 # Download and install the Go
-RUN wget http://golang.org/dl/go1.4.linux-amd64.tar.gz && \
-    tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz && \
-    rm go1.4.linux-amd64.tar.gz
+RUN wget http://golang.org/dl/go1.4.1.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.4.1.linux-amd64.tar.gz && \
+    rm go1.4.1.linux-amd64.tar.gz
 
 # Set the path
 ENV PATH $PATH:/usr/local/go/bin:/workspace/bin
